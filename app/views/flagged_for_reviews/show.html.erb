@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @flagged_for_review %>
+
+<div>
+  <%= link_to "Edit this flagged for review", edit_flagged_for_review_path(@flagged_for_review) %> |
+  <%= link_to "Back to flagged for reviews", flagged_for_reviews_path %>
+
+  <%= button_to "Destroy this flagged for review", @flagged_for_review, method: :delete %>
+</div>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Flagged for reviews</h1>
+
+<div id="flagged_for_reviews">
+  <% @flagged_for_reviews.each do |flagged_for_review| %>
+    <%= render flagged_for_review %>
+    <p>
+      <%= link_to "Show this flagged for review", flagged_for_review %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New flagged for review", new_flagged_for_review_path %>

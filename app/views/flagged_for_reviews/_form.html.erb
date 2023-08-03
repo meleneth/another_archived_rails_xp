@@ -1,0 +1,27 @@
+<%= form_with(model: flagged_for_review) do |form| %>
+  <% if flagged_for_review.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(flagged_for_review.errors.count, "error") %> prohibited this flagged_for_review from being saved:</h2>
+
+      <ul>
+        <% flagged_for_review.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :comment_id, style: "display: block" %>
+    <%= form.text_field :comment_id %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
