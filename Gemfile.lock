@@ -158,6 +158,7 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    random_name_generator (2.0.1)
     reline (0.3.7)
       io-console (~> 0.5)
     rspec-core (3.12.2)
@@ -217,6 +218,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.6)
+  random_name_generator (~> 2.0)
   rspec-rails (~> 6.0)
   sprockets-rails
   stimulus-rails
