@@ -68,3 +68,5 @@ end
 gem "rspec-rails", "~> 6.0", :groups => [:development, :test]
 
 gem "factory_bot_rails", "~> 6.2", :groups => [:development, :test]
+
+gem "cicero", "~> 0.0.1"
