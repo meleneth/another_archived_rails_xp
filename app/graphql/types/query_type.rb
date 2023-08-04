@@ -7,11 +7,20 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    field :author, AuthorType, "Find an author by ID" do
+      argument :id, ID
+    end
+
+    field :post, PostType, "Find a post by ID" do
+      argument :id, ID
+    end
+
+    def author(id:)
+      Author.find(id)
+    end
+
+    def post(id:)
+      Post.find(id)
     end
   end
 end
