@@ -11,6 +11,10 @@ module Types
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
 
-    field :author, AuthorType, null: false
+    field :author, AuthorType
+
+    def author
+      dataloader.with(::Sources::ActiveRecordObject, ::Author).load(object.author_id)
+    end
   end
 end

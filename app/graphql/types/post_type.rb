@@ -12,5 +12,9 @@ module Types
     field :author, AuthorType, null: false
     field :comments, [CommentType], null: false
 
+    def author
+      dataloader.with(::Sources::ActiveRecordObject, ::Author).load(object.author_id)
+    end
+
   end
 end
