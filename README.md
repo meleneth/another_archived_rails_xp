@@ -1,24 +1,17 @@
-# README
+This is a reproduction of ruby threading not working very well.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You'll want to hook it up to a postgres database, personally I export DATABASE_URL=postgres://meleneth:BLESSYOU@tyreen.sectorfour:5432/rails_xp
 
-Things you may want to cover:
+after configuring the database and doing rake db:create / rake db:migrate, rails runner generate_data.rb
 
-* Ruby version
+you will then need to find the ID of a post to query, so rails runner "puts Post.first.id"
 
-* System dependencies
+put that id in blazemeter/k6-graphql-test.js and change the hostname from thinktank.sectorfour to the machine you are running it on (localhost will not work due to Docker)
 
-* Configuration
+you will also need to change the local paths for the volumes in blazemeter/run_benchmark.sh
 
-* Database creation
+after you do all that, with rails server running you can run_benchmark and see the issue
 
-* Database initialization
+you can play with the settings in blazemeter/bzt.yml, it seems to perform worse as the process is stressed.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Different versions of ruby also perform differently, 3.1.3 seems to be worse than 3.2.2

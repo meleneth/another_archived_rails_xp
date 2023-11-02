@@ -66,6 +66,7 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    base64 (0.1.1)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -123,6 +124,8 @@ GEM
       timeout
     net-smtp (0.3.3)
       net-protocol
+    newrelic_rpm (9.6.0)
+      base64
     nio4r (2.5.9)
     nokogiri (1.15.3-x86_64-linux)
       racc (~> 1.4)
@@ -221,6 +224,7 @@ DEPENDENCIES
   graphql (~> 2.0)
   importmap-rails
   jbuilder
+  newrelic_rpm (~> 9.6)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.6)
@@ -233,7 +237,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 3.2.2p53
+   ruby 3.1.3p185
 
 BUNDLED WITH
    2.4.17

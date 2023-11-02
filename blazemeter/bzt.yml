@@ -1,0 +1,7 @@
+execution:
+- executor: k6
+  concurrency: 50
+  hold-for: 1m
+  iterations: 2000
+  scenario:
+    script: k6-graphql-test.js

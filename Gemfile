@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.2"
+ruby "3.1.3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.6"
@@ -74,4 +74,6 @@ gem "cicero", "~> 0.0.1"
 gem "random_name_generator", "~> 2.0"
 
 gem "graphql", "~> 2.0"
-gem "graphiql-rails", group: :development
+gem "graphiql-rails"
+
+gem "newrelic_rpm", "~> 9.6"
